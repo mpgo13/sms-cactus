@@ -31,3 +31,7 @@ td {
 .unread {
 	font-weight: bold;
 }
+
+.ui-widget {
+	font-size: 0.8em;
+}
