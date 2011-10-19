@@ -80,6 +80,18 @@ $(document).ready(function() {
 	$('textarea').keyup(function() {
 		$('span.count').html(this.value.length);
 	});
+	$('#hidemessages').click(function() {
+		var text = "hide";
+		var visibility = "visible";
+
+		if (this.innerHTML == text) {
+		       text = "show";
+		       visibility = "hidden";
+		}
+
+		this.innerHTML = text;
+		$('#messages').css('visibility', visibility);
+	});
 	function fetchSms(lastid) {
 		
 		$.getJSON('msg/list?lastid=' + lastid, function(sms) {
